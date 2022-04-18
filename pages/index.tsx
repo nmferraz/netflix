@@ -13,12 +13,10 @@ function Home() {
       <Header />
       <main>
         {/* Banner */}
-        <section>
-          {/* Row */}
-        </section>
+        <section>{/* Row */}</section>
       </main>
     </div>
   )
-  }
+}
 
 export default Home
