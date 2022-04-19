@@ -34,9 +34,9 @@ function Header() {
           <li className="headerLink cursor-default font-semibold text-white hover:text-white">
             <Link href="/">Home</Link>
           </li>
-          <li className="headerLink">TV Shows</li>
-          <li className="headerLink">Movies</li>
-          <li className="headerLink">New & Popular</li>
+          <li className="headerLink"><Link href="#toprated">Top Rated</Link></li>
+          <li className="headerLink"><Link href="#trending">Trending</Link></li>
+          <li className="headerLink"><Link href="#comedies">Comedies</Link></li>
           <li className="headerLink">My List</li>
         </ul>
       </div>
