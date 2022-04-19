@@ -27,7 +27,7 @@ const Home = ({
   trendingNow,
 }: Props) => {
   return (
-    <div className="gb-gradient-to-b relative h-screen from-gray-900/10 to-[#010511] lg:h-[140vh]">
+    <div className="bg-gradient-to-b relative h-screen from-gray-900/10 to-[#010511] lg:h-[140vh]">
       <Head>
         <title>Home | Netflix | By nmferraz</title>
         <link rel="icon" href="/favicon.ico" />
