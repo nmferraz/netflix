@@ -1,17 +1,19 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline'
-import { useRef, useState } from 'react'
+import { DocumentData } from 'firebase/firestore'
+import { useEffect, useRef, useState } from 'react'
 import { Movie } from '../typings'
 import Thumbnail from './Thumbnail'
 
 interface Props {
   title: string
   slug: string
-  movies: Movie[]
+  movies: Movie[] | DocumentData[]
 }
 
 function Row({ title, movies, slug }: Props) {
   const rowRef = useRef<HTMLDivElement>(null)
   const [isMoved, setIsMoved] = useState(false)
+  const [slideNumber, setSlideNumber] = useState(0)
 
   const handleClick = (direction: string) => {
     setIsMoved(true)

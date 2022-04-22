@@ -8,6 +8,7 @@ import Row from '../components/Row'
 import useAuth from '../hooks/useAuth'
 import { Movie } from '../typings'
 import requests from '../utils/requests'
+import useList from '../hooks/useList'
 
 interface Props {
   netflixOriginals: Movie[]
@@ -30,9 +31,10 @@ const Home = ({
   topRated,
   trendingNow,
 }: Props) => {
-  const { loading } = useAuth()
+  const { user, loading } = useAuth()
   const showModal = useRecoilValue(modalState)
   const movie = useRecoilValue(movieState)
+  const list = useList(user?.uid)
   if (loading === null) return null
   return (
     <div
@@ -52,6 +54,7 @@ const Home = ({
       <main className="relative pl-4 lg:space-y-24 lg:pl-16">
         <Banner netflixOriginals={netflixOriginals} />
         <section className="md:space-y-24">
+          {list.length > 0 && <Row title="My List" slug="mylist" movies = {list} />}
           <Row title="Trending Now" slug="trending" movies={trendingNow} />
           <Row title="Top Rated" slug="toprated" movies={topRated} />
           <Row title="Action Thrillers" slug="action" movies={actionMovies} />
