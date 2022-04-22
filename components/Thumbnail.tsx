@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Movie } from '../typing'
+import { Movie } from '../typings'
 
 interface Props {
   //movie: Movie || DocumentData  to firebase
