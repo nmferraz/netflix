@@ -47,6 +47,7 @@ function Login() {
         width={150}
         height={150}
       />
+
       <form
         className="relative mt-24 space-y-8 rounded bg-black/75 py-10 px-6 md:mt-0 md:max-w-md md:px-14"
         onSubmit={handleSubmit(onSubmit)}
