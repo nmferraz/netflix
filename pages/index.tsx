@@ -1,12 +1,13 @@
 import Head from 'next/head'
+import { useRecoilValue } from 'recoil'
+import { modalState, movieState } from '../atoms/modalAtom.'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
+import Modal from '../components/Modal'
 import Row from '../components/Row'
+import useAuth from '../hooks/useAuth'
 import { Movie } from '../typings'
 import requests from '../utils/requests'
-import useAuth from '../hooks/useAuth'
-import { useRecoilValue } from 'recoil'
-import Modal from '../components/Modal'
 
 interface Props {
   netflixOriginals: Movie[]
